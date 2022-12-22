@@ -2,13 +2,12 @@ public class Main {
     public static void main(String[] args) {
         CreditPaymentService service = new CreditPaymentService();
 
-        double credit_amount = 1_000_000;  // Сумма займа
-        double protsentnaya_stavka = 9.99 ; // Процентная ставка
-        double srok_kredita = 24; // Срок кредита
-        double monthly_payment = service.calculate(credit_amount, protsentnaya_stavka,srok_kredita);
+        double creditAmount = 1_000_000;  // Сумма займа
+        double interestRate = 9.99 ; // Процентная ставка
+        double creditTerm = 24; // Срок кредита
+        double monthlyPayment = service.calculate(creditAmount, interestRate,creditTerm);
 
 
-
-        System.out.println(Math.floor(monthly_payment));
+        System.out.println(Math.floor(monthlyPayment));
     }
 }
